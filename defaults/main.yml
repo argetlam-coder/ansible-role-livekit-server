@@ -20,6 +20,12 @@ livekit_server_version: v1.13.11
 livekit_server_uid: ""
 livekit_server_gid: ""
 
+# Controls the user that the container runs as. Set to `0` to run as root.
+livekit_server_container_uid: "{{ livekit_server_uid }}"
+
+# Controls the group that the container runs as. Set to `0` to run as root.
+livekit_server_container_gid: "{{ livekit_server_gid }}"
+
 # The scheme used for serving LiveKit Server.
 livekit_server_scheme: https
 

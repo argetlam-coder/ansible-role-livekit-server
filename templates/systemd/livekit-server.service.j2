@@ -33,7 +33,7 @@ ExecStartPre={{ devture_systemd_docker_base_host_command_docker }} create \
       --rm \
       --name={{ livekit_server_identifier }} \
       --log-driver=none \
-      --user={{ livekit_server_uid }}:{{ livekit_server_gid }} \
+      --user={{ livekit_server_container_uid }}:{{ livekit_server_container_gid }} \
       --cap-drop=ALL \
       --network={{ livekit_server_container_network }} \
       {% if livekit_server_container_network != 'host' %}
